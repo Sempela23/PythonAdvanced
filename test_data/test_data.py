@@ -10,7 +10,7 @@ class Users:
 
 class UserPlusOneFor404:
     @staticmethod
-    def users_plus_one_from_list_users():
+    def non_existent_user_id():
         if users_data:
             # Последний элемент списка всегда будет иметь максимальный ID
             last_user = users_data[-1]
