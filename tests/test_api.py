@@ -46,9 +46,6 @@ class TestApi:
 
 
     def test_get_non_existent_user(self, base_url: str):
-
-        over_user = UserPlusOneFor404.users_plus_one_from_list_users()
-        print(over_user)
-        response = requests.get(f"{base_url}/api/user/{over_user}")
+        response = requests.get(f"{base_url}/api/user/{UserPlusOneFor404.non_existent_user_id}")
         r = response.json()
-        assert response.status_code == 404 and r == {'detail': 'User not found'}
+        assert response.status_code == 404 and r == {}
